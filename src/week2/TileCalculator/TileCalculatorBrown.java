@@ -25,7 +25,10 @@ public class TileCalculatorBrown {
 
         double tilesNeeded = backsplashSquareFootage / tileSquareFoot;
 
-        System.out.println("We need " + tilesNeeded + " tiles to complete the backsplash.");
+        int roundedUpTilesNeeded = (int)Math.ceil(tilesNeeded);
+        //double roundedUpTilesNeeded = Math.ceil(tilesNeeded);
+
+        System.out.println("We need " + roundedUpTilesNeeded + " tiles to complete the backsplash.");
 
     }
 }
