@@ -25,8 +25,11 @@ public class TileCalculatorBrown {
 
         System.out.println("Square foot is " + backsplashSquareFootage + ".");
 
-        double tileLength = 11.75;
-        double tileHeight = 11.75;
+        System.out.print("Please enter the length of a single tile:");
+        double tileLength = scanner.nextDouble();
+
+        System.out.print("Please enter the width of a single tile:");
+        double tileHeight = scanner.nextDouble();
 
         double tileSquareFoot = (tileHeight*tileLength)/INCHES_PER_SQUARE_FOOT;
 
