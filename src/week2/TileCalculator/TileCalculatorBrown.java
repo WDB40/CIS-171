@@ -1,12 +1,19 @@
 package week2.TileCalculator;
 
+import java.util.Scanner;
+
 public class TileCalculatorBrown {
     //Wes Brown
 
     public static void main(String[] args) {
 
-        double backsplashLength = 117;
-        double backsplachWidth = 18;
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Please enter the width of your backsplash: ");
+        double backsplashLength = scanner.nextDouble();
+
+        System.out.print("Please enter the length of your backsplash:");
+        double backsplachWidth = scanner.nextDouble();
 
         double backsplashAreaInInches = backsplashLength * backsplachWidth;
 
@@ -29,6 +36,8 @@ public class TileCalculatorBrown {
         //double roundedUpTilesNeeded = Math.ceil(tilesNeeded);
 
         System.out.println("We need " + roundedUpTilesNeeded + " tiles to complete the backsplash.");
+
+        scanner.close();
 
     }
 }
