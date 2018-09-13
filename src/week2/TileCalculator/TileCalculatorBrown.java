@@ -9,6 +9,9 @@ public class TileCalculatorBrown {
 
         Scanner scanner = new Scanner(System.in);
 
+        double SALES_TAX_PERCENT = 0.06;
+
+        //Get and print backsplash area
         System.out.print("Please enter the width of your backsplash: ");
         double backsplashLength = scanner.nextDouble();
 
@@ -39,6 +42,16 @@ public class TileCalculatorBrown {
         //double roundedUpTilesNeeded = Math.ceil(tilesNeeded);
 
         System.out.println("We need " + roundedUpTilesNeeded + " tiles to complete the backsplash.");
+
+        //Calculate the cost of the tiles
+        System.out.print("Please enter the cost per tile: ");
+        double costPerTile = scanner.nextDouble();
+
+        double costAllTiles = costPerTile * roundedUpTilesNeeded;
+        double taxAmount = costAllTiles * SALES_TAX_PERCENT;
+        double totalCost = costAllTiles + taxAmount;
+
+        System.out.printf("The total cost of the titles is: $%.2f", totalCost);
 
         scanner.close();
 
