@@ -24,5 +24,7 @@ public class AverageAgeBrown {
         averageAge = (double)totalAges/ages.length;
 
         System.out.printf("The average age of the %d people is %.2f.", ages.length, averageAge);
+
+        scanner.close();
     }
 }
