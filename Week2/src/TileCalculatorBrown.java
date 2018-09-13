@@ -1,5 +1,3 @@
-package week2.TileCalculator;
-
 import java.util.Scanner;
 
 public class TileCalculatorBrown {

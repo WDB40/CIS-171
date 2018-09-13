@@ -1,5 +1,3 @@
-package week2;
-
 public class HelloPrinter {
 
     public static void main(String[] args) {
