@@ -1,30 +1,21 @@
+import java.util.Scanner;
+
 public class BookOrderBrown {
 
     public static void main(String[] args) {
 
         //Wes Brown
 
-        int numBooks;
-        double bookSubtotal;
-        double orderTotal;
+        Scanner scanner = new Scanner(System.in);
 
-        //Test Data #1
-        numBooks = 5;
-        bookSubtotal = 68.45;
-        orderTotal =calcOrderTotal(numBooks, bookSubtotal);
-        System.out.println(printOrder(numBooks,bookSubtotal,orderTotal));
+        System.out.print("Enter the number of books: ");
+        int numBooks = scanner.nextInt();
 
-        //Test Data #2
-        numBooks = 8;
-        bookSubtotal = 125.37;
-        orderTotal = calcOrderTotal(numBooks,bookSubtotal);
-        System.out.println(printOrder(numBooks, bookSubtotal, orderTotal));
+        System.out.print("Enter the subtotal for the books: $");
+        double bookSubtotal = scanner.nextDouble();
 
-        //Test Data #3
-        numBooks = 500;
-        bookSubtotal = 6784.97;
-        orderTotal = calcOrderTotal(numBooks,bookSubtotal);
-        System.out.println(printOrder(numBooks, bookSubtotal,orderTotal));
+        double orderTotal =calcOrderTotal(numBooks, bookSubtotal);
+        System.out.printf("The order total for %d books with a subtotal of $%.2f is: $%.2f", numBooks,bookSubtotal, orderTotal);
 
     }
 
@@ -39,9 +30,4 @@ public class BookOrderBrown {
         return bookSubtotal + tax + shippingCost;
     }
 
-    static String printOrder(int numBooks, double bookSubtotal, double orderTotal) {
-
-        return String.format("The order total for %d books with a subtotal of $%.2f is: $%.2f", numBooks,bookSubtotal, orderTotal);
-
-    }
 }
