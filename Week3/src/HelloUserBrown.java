@@ -44,7 +44,7 @@ public class HelloUserBrown {
 
     private static void displayAgeNextYear(int ageNextYear, String name) {
 
-        String message = String.format("%s, your age next year will be %d!", name, ageNextYear);
+        String message = String.format("Howdy, %s. Next year, you will be %d years old!", name, ageNextYear);
         JOptionPane.showMessageDialog(null, message);
     }
 }
