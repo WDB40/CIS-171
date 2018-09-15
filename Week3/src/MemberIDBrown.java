@@ -4,9 +4,16 @@ public class MemberIDBrown {
 
     public static void main(String[] args) {
 
+        //Wes Brown
+
+        //Get the member ID
         String memberID = getMemberID();
+
+        //Format the member ID
         memberID = formatMemberID(memberID);
-        System.out.println(memberID);
+
+        //Print out the member ID
+        System.out.printf("Formatted Member ID: %s", memberID);
     }
 
     private static String getMemberID(){
@@ -23,6 +30,7 @@ public class MemberIDBrown {
             memberID = scanner.nextLine();
         } while (memberID.length() != MEMBER_ID_LENGTH);
 
+        //Return the valid memberID
         return memberID;
     }
 
@@ -37,6 +45,7 @@ public class MemberIDBrown {
                 " " + formattedMemberId.substring(8, 10) + "-" + formattedMemberId.substring(10, 13) +
                 " (" + formattedMemberId.substring(13) + ")";
 
+        //Return the formatted member ID
         return formattedMemberId;
     }
 }
