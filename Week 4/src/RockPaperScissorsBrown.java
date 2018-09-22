@@ -1,4 +1,3 @@
-import java.lang.management.PlatformLoggingMXBean;
 import java.util.Scanner;
 
 public class RockPaperScissorsBrown {
@@ -143,18 +142,8 @@ public class RockPaperScissorsBrown {
 
     private static boolean validEntry(String choice){
 
-        if(choice.equalsIgnoreCase(SPOCK)){
-            return true;
-        } else if(choice.equalsIgnoreCase(LIZARD)){
-            return true;
-        } else if(choice.equalsIgnoreCase(ROCK)){
-            return true;
-        } else if(choice.equalsIgnoreCase(PAPER)){
-            return true;
-        } else if(choice.equalsIgnoreCase(SCISSORS)){
-            return true;
-        } else {
-            return false;
-        }
+        return choice.equalsIgnoreCase(SPOCK) || choice.equalsIgnoreCase(LIZARD) ||
+                choice.equalsIgnoreCase(ROCK) || choice.equalsIgnoreCase(PAPER) ||
+                choice.equalsIgnoreCase(SCISSORS);
     }
 }
