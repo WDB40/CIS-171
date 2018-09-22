@@ -4,6 +4,8 @@ public class ShopperRewardsBrown {
 
     public static void main(String[] args) {
 
+        //Wes Brown
+
         double groceriesCost = getGroceriesCost();
         double couponAmount = calcCouponAmount(groceriesCost);
         int gasDiscount = getGasPerGallonDiscount(groceriesCost);
