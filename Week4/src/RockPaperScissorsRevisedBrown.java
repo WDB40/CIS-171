@@ -39,6 +39,8 @@ public class RockPaperScissorsRevisedBrown {
 
     private static int getWinner(String[] playerChoices){
 
+        int matchWinner = PLAYER_TWO;
+
         if(playerChoices[PLAYER_ONE].equalsIgnoreCase(playerChoices[PLAYER_TWO])){
             return TIE;
         }
@@ -46,42 +48,37 @@ public class RockPaperScissorsRevisedBrown {
         switch (playerChoices[PLAYER_ONE]){
 
             case ROCK: {
-                if(doesRockWin(playerChoices[PLAYER_TWO])){
-                    return PLAYER_ONE;
-                } else {
-                    return PLAYER_TWO;
-                }
+                if(doesRockWin(playerChoices[PLAYER_TWO]))
+                    matchWinner = PLAYER_ONE;
+                break;
             }
             case PAPER: {
-                if(doesPaperWin(playerChoices[PLAYER_TWO])){
-                    return PLAYER_ONE;
-                } else {
-                    return PLAYER_TWO;
-                }
+                if(doesPaperWin(playerChoices[PLAYER_TWO]))
+                    matchWinner = PLAYER_ONE;
+                break;
             }
             case SCISSORS: {
-                if(doesScissorsWin(playerChoices[PLAYER_TWO])){
-                    return PLAYER_ONE;
-                } else {
-                    return PLAYER_TWO;
-                }
+                if(doesScissorsWin(playerChoices[PLAYER_TWO]))
+                    matchWinner = PLAYER_ONE;
+                break;
             }
             case LIZARD: {
-                if(doesLizardWin(playerChoices[PLAYER_TWO])){
-                    return PLAYER_ONE;
-                } else{
-                    return PLAYER_TWO;
-                }
+                if(doesLizardWin(playerChoices[PLAYER_TWO]))
+                    matchWinner = PLAYER_ONE;
+                break;
             }
             case SPOCK: {
-                if(doesSpockWin(playerChoices[PLAYER_TWO])){
-                    return PLAYER_ONE;
-                } else {
-                    return PLAYER_TWO;
-                }
+                if(doesSpockWin(playerChoices[PLAYER_TWO]))
+                    matchWinner = PLAYER_ONE;
+                break;
             }
-            default: return GAME_FAILED;
+            default: {
+                matchWinner = GAME_FAILED;
+                break;
+            }
         }
+
+        return matchWinner;
     }
 
     private static boolean doesScissorsWin(String against){
