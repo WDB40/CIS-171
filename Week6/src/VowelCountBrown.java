@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class VowelCountBrown {
 
     private static final int NO_VOWELS = 0;
+    private static final int ONE_VOWEL = 1;
 
     public static void main(String[] args) {
-
         countVowels();
     }
 
@@ -18,9 +18,11 @@ public class VowelCountBrown {
 
     private static void printResults(String input, int vowelCount){
 
-        if(vowelCount==0){
+        if(vowelCount == NO_VOWELS){
             System.out.println("You must have made a mistake somewhere in there...");
-        } else {
+        } else if (vowelCount == ONE_VOWEL){
+            System.out.printf("%s contains %d vowel.", input, vowelCount);
+        } else{
             System.out.printf("%s contains %d vowels.", input, vowelCount);
         }
     }
