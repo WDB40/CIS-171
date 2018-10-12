@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class RandomNumbersBrown {
@@ -34,7 +35,7 @@ public class RandomNumbersBrown {
     }
 
     private static int getRandomNumber(int min, int max){
-        return (int) ((Math.random()*(max-min + 1)) + min);
+        return new Random().nextInt((max-min)+1) + min;
     }
 
     private static int getInteger(String message){
